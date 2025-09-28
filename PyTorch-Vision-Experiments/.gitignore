@@ -1,0 +1,23 @@
+# Python-specific files
+__pycache__/
+*.pyc
+
+# Virtual Environment
+
+cool_env/
+venv/
+.env/
+
+# Ignoring the 'data' folder containsing image/model data
+data/
+
+# Operating System Files
+.DS_Store  # macOS files
+Thumbs.db  # Windows files
+
+# PyTorch/Machine Learning Specific: Ignoring saved model weights, large checkpoints, or logs
+*.pt
+*.pth
+*.tar
+checkpoints/
+logs/

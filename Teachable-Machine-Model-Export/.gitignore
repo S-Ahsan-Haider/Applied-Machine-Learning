@@ -1,0 +1,9 @@
+# Ignoring virtual environments
+
+my_env/
+tenso_env/
+
+# Ignoring Python bytecodes and cache folders
+
+__pycache__/
+*.pyc

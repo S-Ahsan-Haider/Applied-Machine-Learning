@@ -1,0 +1,30 @@
+# This workflow's name will appear on the GitHub Actions page
+name: Docker CI
+
+# This defines the events that will trigger the workflow
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+# A workflow is made of one or more jobs
+jobs:
+  # This job will build our Docker image
+  build:
+    # We want this job to run on the latest version of Ubuntu
+    runs-on: ubuntu-latest
+
+    # These are the steps our job will perform
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          # This line ensures we get the entire git history, which is needed by some actions
+          fetch-depth: 0
+
+      # Step 2: Build the Docker image from our Dockerfile
+      - name: Build Docker image
+        # This uses the command we used locally to build the image
+        run: docker build -t opencv-image-processor:latest ./Image\ Processor\ CI-CD

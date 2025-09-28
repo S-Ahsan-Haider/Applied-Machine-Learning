@@ -1,0 +1,57 @@
+NLP Project Reference
+
+Model Name
+
+facebook/bart-large-cnn
+
+-   Publisher: Facebook AI
+-   Architecture: BART (Bidirectional + Auto-Regressive Transformers)
+-   Training Dataset: CNN/DailyMail news articles
+-   Size: ~1.5 GB
+
+------------------------------------------------------------------------
+
+Cache Location
+
+The model is downloaded once and stored in cache:
+
+Windows: C:<YourUsername>.cache Linux/macOS:
+~/.cache/huggingface/transformers
+
+Hugging Face will automatically use the cached copy in future projects.
+
+------------------------------------------------------------------------
+
+Where Else Can This Model Be Used?
+
+1.  Summarization App
+    -   Summarize research papers, news, or PDFs.
+    -   Build a GUI with Tkinter, Streamlit, or PyQt.
+2.  Chatbot Integration
+    -   Summarize customer conversations for support agents.
+3.  Document Management
+    -   Summarize contracts, legal documents, or meeting notes.
+4.  Research Aid
+    -   Compact abstracts of long journal articles.
+5.  API Service
+    -   Deploy as a microservice using Flask or FastAPI.
+6.  Pipeline Combinations
+    -   Combine with NER (e.g.,
+        dbmdz/bert-large-cased-finetuned-conll03-english) to create
+        entity-focused summaries.
+
+------------------------------------------------------------------------
+
+Alternative (Smaller) Model
+
+If disk space or memory is limited, use:
+
+sshleifer/distilbart-cnn-12-6
+(~600 MB, distilled version of BART, faster and lighter).
+
+------------------------------------------------------------------------
+
+Pro Tip
+
+Always check your Hugging Face cache before re-downloading models to
+save time and bandwidth.
